@@ -9,7 +9,7 @@ const Blog = () => {
         <div className="container topMargin">
           <div className="heading">
             <h3>Search Result</h3>
-            <h1>SEARCH RESULT</h1>
+            <h1>검색 결과</h1>
           </div>
           <div className="contain grid topMargin">
             {Blogdata.map((val) => {
@@ -29,7 +29,6 @@ const Blog = () => {
                 </div>
               );
             })}
-            div.
           </div>
         </div>
       </section>

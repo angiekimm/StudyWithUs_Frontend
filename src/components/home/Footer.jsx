@@ -6,12 +6,11 @@ const Footer = () => {
       <footer>
         <div className="container grid2">
           <div className="box">
-            <img src="./assets/logo2.png" alt="" />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id autem
-              veritatis nobis inventore consectetur omnis porro iusto excepturi,
-              quo voluptate quos vel, quasi officia fugiat.
-            </p>
+            <img
+              src="https://see.fontimg.com/api/renderfont4/Ea2l9/eyJyIjoiZnMiLCJoIjoxNTIsInciOjIwMDAsImZzIjo3NiwiZmdjIjoiIzAwMDAwMCIsImJnYyI6IiNGRkZGRkYifQ/U1RVRFkgV0lUSCBVUw/valentine.png"
+              alt=""
+            />
+            <p>온라인 스터디 공간입니다.</p>
             <div className="socialIcon">
               <i className="fab fa-facebook-f "></i>
               <i className="fab fa-instagram "></i>

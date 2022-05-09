@@ -5,6 +5,7 @@ import WorkIcon from "@mui/icons-material/Work";
 import GridViewIcon from "@mui/icons-material/GridView";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Avatar } from "@mui/material";
 
 export const Header = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -17,7 +18,9 @@ export const Header = () => {
     <header className="header">
       <div className="container flex">
         <div className="logo">
-          <img src="assets/logo2.jpg" alt="" />
+          <Link to="/">
+            <img src="./assets/StudyWithUs2.png" alt="logo" />
+          </Link>
         </div>
         <div className="nav">
           <ul
@@ -25,7 +28,12 @@ export const Header = () => {
             onClick={() => setSidebar(false)}
           >
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/board">
+                <h4>자유게시판</h4>
+              </Link>
+            </li>
+            <li>
+              <Avatar sx={{ width: 35, height: 35 }} />
             </li>
             {/* <li>
               <Link to="/pages">Pages</Link>

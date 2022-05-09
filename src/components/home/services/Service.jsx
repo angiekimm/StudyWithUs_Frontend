@@ -8,7 +8,7 @@ const Service = () => {
         <div className="container">
           <div className="heading">
             <h3>MY STUDY GROUP</h3>
-            <h1>MY STUDY GROUP</h1>
+            <h1>내 스터디 목록</h1>
           </div>
           <div className="contain grid topMargin">
             {ServicesData.map((val) => {
