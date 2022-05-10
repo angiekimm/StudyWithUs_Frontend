@@ -8,7 +8,7 @@ const MyStudyGroup = () => {
         <div className="container">
           <div className="heading">
             <h3>My Study Group</h3>
-            <h1>My Study Group</h1>
+            <h1>내 스터디 그룹</h1>
           </div>
           <div className="content flex topMargin">
             <div className="left">
