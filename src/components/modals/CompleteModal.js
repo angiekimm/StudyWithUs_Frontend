@@ -1,7 +1,7 @@
 import React from "react";
 import { Modal, Button } from "react-bootstrap";
 
-const CompleteModal = ({ show, onHide }) => {
+const CompleteModal = ({ show, onHide, func }) => {
   return (
     <Modal
       show={show}
@@ -16,7 +16,7 @@ const CompleteModal = ({ show, onHide }) => {
       <Modal.Body>
         {/* <div className="modal"> */}
         {/* <h4>Centered Modal</h4> */}
-        <p>수정이 완료되었습니다.</p>
+        <p>{func}이 완료되었습니다.</p>
         {/* </div> */}
       </Modal.Body>
       <Modal.Footer>
