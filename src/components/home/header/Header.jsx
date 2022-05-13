@@ -28,6 +28,11 @@ export const Header = () => {
             onClick={() => setSidebar(false)}
           >
             <li>
+              <Link to="/chat">
+                <h4>채팅</h4>
+              </Link>
+            </li>
+            <li>
               <Link to="/board">
                 <h4>자유게시판</h4>
               </Link>

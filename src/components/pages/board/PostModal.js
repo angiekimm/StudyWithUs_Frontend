@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Modal, Button } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
+import { Button } from "@mui/material";
 
 const PostModal = ({ show, onHide, onSaveData }) => {
   const [form, setForm] = useState({

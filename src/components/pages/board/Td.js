@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Td = ({ item, handleRemove, handleEdit }) => {
   const onRemove = () => {
@@ -11,7 +12,9 @@ const Td = ({ item, handleRemove, handleEdit }) => {
     <>
       <tr className="bg-white border-2 border-gray-200">
         <td className="px-4 py-3">{item.id}</td>
-        <td className="px-4 py-3">{item.email}</td>
+        <td className="px-4 py-3">
+          <Link to="/board/detail">{item.email}</Link>
+        </td>
         <td className="px-4 py-3">{item.name}</td>
         <td className="px-4 py-3">{item.phone}</td>
         <td

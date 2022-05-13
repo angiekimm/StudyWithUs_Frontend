@@ -1,35 +1,42 @@
-import {
-  Button,
-  Checkbox,
-  TextField,
-  FormControlLabel,
-} from "@material-ui/core";
+import { Button, TextField } from "@material-ui/core";
 import Avatar from "@mui/material/Avatar";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import { call } from "../../../service/ApiService";
-import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { blue } from "@mui/material/colors";
+import { call } from "../../../service/ApiService";
+import AccountModal from "../../modals/\bAccountModal";
 
-function Login() {
+function FindID() {
+  // 넘길 데이터 저장
   const [state, setState] = useState({});
+  // 받을 데이터가 object면 useState 안에 {key: []}
   const [data, setData] = useState();
-  const [id, setId] = useState("");
-  const [pw, setPw] = useState("");
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
 
   useEffect(() => {
-    call("/loginUser", "POST", { id, pw }).then((response) => {
+    call("/findID", "POST", state).then((response) => {
       setData(response);
+      console.log(data);
     });
   }, [state]);
 
+  // 아이디 알려주는 모달창
+  const [ModalOn, setModalOn] = useState(false);
+
   return (
     <>
-      <div className="login">
+      <AccountModal
+        show={ModalOn}
+        onHide={() => setModalOn(false)}
+        data={data}
+      />
+      <div className="findpw">
         <div className="container">
           <Container component="main" maxWidth="xs">
             <Box
@@ -44,33 +51,29 @@ function Login() {
                 <LockOutlinedIcon />
               </Avatar>
               <Typography component="h1" variant="h5">
-                로그인
+                아이디찾기
               </Typography>
               <TextField
                 margin="normal"
-                label="ID"
+                label="이름"
                 required
                 fullWidth
-                name="id"
-                autoComplete="id"
+                name="name"
+                autoComplete="name"
                 autoFocus
-                value={id}
-                onChange={(e) => setId(e.target.value)}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
               <TextField
                 margin="normal"
-                label="Password"
-                type="password"
+                label="이메일"
                 required
                 fullWidth
-                id="password"
-                autoComplete="current-password"
-                value={pw}
-                onChange={(e) => setPw(e.target.value)}
-              />
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
+                name="email"
+                autoComplete="email"
+                autoFocus
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <Button
                 type="submit"
@@ -79,20 +82,13 @@ function Login() {
                 sx={{ mt: 3, mb: 2 }}
                 color="primary"
                 onClick={() => {
-                  setState({ id, pw });
+                  setState({ name, email });
+                  setModalOn(true);
                 }}
               >
-                로그인
+                아이디 찾기
               </Button>
-              <Grid container>
-                <Grid item xs>
-                  <Link to="/account/findid">아이디 찾기</Link>/
-                  <Link to="/account/findpw">비밀번호 찾기</Link>
-                </Grid>
-                <Grid>
-                  <Link to="/account/signup">회원가입</Link>
-                </Grid>
-              </Grid>
+              <Link to="/account/login">로그인으로 돌아가기</Link>
             </Box>
           </Container>
         </div>
@@ -101,4 +97,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default FindID;

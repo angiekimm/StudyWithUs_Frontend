@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { TextField, Button } from "@material-ui/core";
 import { Avatar } from "@mui/material";
-import CompleteModal from "../../../modals/CompleteModal";
+import CompleteModal from "../../modals/CompleteModal";
 
 const MyInfo = () => {
   // 프로필 사진 미리보기
   const [preview, setPreview] = useState();
+
+  const [func, setFunc] = useState("수정");
 
   const insertImg = (e) => {
     let reader = new FileReader();
@@ -34,6 +36,7 @@ const MyInfo = () => {
       <CompleteModal
         show={completeModalOn}
         onHide={() => setCompleteModalOn(false)}
+        func={func}
       />
       <section className="myinfo">
         <div className="container">

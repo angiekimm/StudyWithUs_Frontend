@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const MyStudyGroup = () => {
   return (
@@ -27,8 +28,12 @@ const MyStudyGroup = () => {
                   <h4>참가 가능 포인트: 500포인트</h4>
                 </div>
                 <div className="groupjoin">
-                  <Button size="large">💬 채팅</Button>
-                  <Button size="large">📚 스터디룸 입장하기</Button>
+                  <Link to="/chat">
+                    <Button size="large">💬 채팅</Button>
+                  </Link>
+                  <Link to="/studyroom">
+                    <Button size="large">📚 스터디룸 입장하기</Button>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -14,6 +14,15 @@ body {
   font-family: "Rubik", sans-serif;
 }
 
+h1 {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 700;
+}
+
 .container {
   max-width: 80%;
   margin: auto;
@@ -337,9 +346,11 @@ h3 {
   font-style: 22px;
   margin-bottom: 20px;
 }
+.studyBtn {
+  margin-top: 10px;
+}
 /* ---------------services------------------- */
 /* ---------------search------------------- */
-
 .search .container {
   height: 72vh;
   background-color: #f6f2ee;
@@ -611,6 +622,8 @@ h3 {
 }
 .blog h2 {
   margin: 20px 0;
+  font-size: 22px;
+  font-weight: 500;
 }
 .blog a {
   color: #6ad138;
@@ -870,6 +883,175 @@ footer .icon i {
 /* ---------------findpw------------------- */
 /* ---------------board------------------- */
 .board {
-  height: 120vh;
+  height: 100vh;
+  margin-bottom: 100px;
 }
 /* ---------------board------------------- */
+/* ---------------mypoint------------------- */
+
+.mypoint {
+  height: 70vh;
+  background-color: #f8f9fe;
+  padding-top: 50px;
+}
+.mypoint .heading {
+  text-align: center;
+}
+.mypoint .pointinfo {
+  margin: auto;
+  width: 50% !important;
+  text-align: center;
+}
+.mypoint .pointinfo table {
+  width: 100%;
+}
+.mypoint .pointinfo table th span {
+  color: #386ad1;
+}
+/* ---------------mypoint------------------- */
+/* ---------------myrefundpoint------------------- */
+.myrefundpoint .heading {
+  text-align: center;
+}
+.myrefundpoint table {
+  margin-bottom: 100px;
+}
+/* ---------------myrefundpoint------------------- */
+/* ---------------createstudy------------------- */
+.createstudy {
+  margin-bottom: 100px;
+}
+.createstudy .card .profile {
+  justify-content: center;
+}
+.createstudy img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+}
+
+/* ---------------createstudy------------------- */
+/* ---------------studydetail------------------- */
+.studydetail .value {
+  color: #aaaaaa;
+}
+.studydetail .alert {
+  color: #c8232c;
+  text-align: center;
+  font-weight: 600;
+}
+.studydetail img {
+  margin: auto;
+}
+/* ---------------studydetail------------------- */
+/* ---------------mychat------------------- */
+.mychat .heading {
+  text-align: center;
+}
+/* ---------------mychat------------------- */
+/* ---------------admin------------------- */
+.admin {
+  height: 87vh;
+}
+.admin .heading {
+  text-align: center;
+}
+.admin .subtitle ul {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 35%;
+  font-size: 22px;
+}
+.admin .refund .totalpoint {
+  text-align: right;
+  font-size: 20px;
+  color: #386ad1;
+  font-weight: 500;
+}
+.admin .refund .table {
+  margin-top: 20px;
+}
+.admin .user .searchuser,
+.admin .study .searchstudy {
+  text-align: right;
+}
+.admin .user .searchuser Input,
+.admin .study .searchstudy Input {
+  width: 200px;
+}
+.admin .user .searchuser Button,
+.admin .study .searchstudy Button {
+  margin: 0 3px;
+}
+.admin .user table,
+.admin .study table {
+  margin-top: 20px;
+}
+
+/* ---------------admin------------------- */
+/* ---------------studyroom------------------- */
+.studyroom {
+  height: 100vh;
+}
+.studyroom .heading {
+  text-align: center;
+  margin-top: 20px;
+}
+.studyroom .content {
+  display: flex;
+}
+.studyroom .screen {
+  padding: 50px;
+}
+.studyroom .exitBtn {
+  margin-left: 50px;
+}
+.studyroom .studymember {
+  height: 35vh;
+  border-bottom: 0.5px solid lightgray;
+}
+.studyroom .studymember .heading {
+  font-size: 23px;
+}
+.studyroom .studymember .memberon {
+  margin-top: 20px;
+  display: flex;
+}
+.studyroom .studymember span {
+  font-size: 20px;
+  margin: auto 20px auto 20px;
+}
+.studyroom .studymember h4 {
+  font-size: 17px;
+  margin: auto 20px auto 20px;
+}
+.studyroom .right {
+  border: 0.5px solid lightgray;
+  padding: 20px;
+}
+.studyroom .studyroomchat {
+  padding: 20px;
+  height: 50%;
+}
+.studyroom .chatheading {
+  font-size: 25px;
+}
+.studyroom .chatMessages {
+  height: 60%;
+}
+.studyroom .studyroomchat .chatinputform {
+  border-top: 0.5px solid lightgray;
+  /* background-color: black; */
+  display: flex;
+  padding-top: 20px;
+}
+
+.studyroom .studyroomchat .chatinput {
+  width: 80%;
+}
+.studyroom .studyroomchat .chatsendbtn Button {
+  width: 20%;
+}
+
+/* ---------------studyroom------------------- */ ;

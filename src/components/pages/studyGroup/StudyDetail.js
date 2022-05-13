@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const StudyDetail = () => {
   const [preview, setPreview] = useState();
@@ -63,15 +64,17 @@ const StudyDetail = () => {
                 </tr>
               </table>
               <div className="topMargin">
-                <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  onClick={() => setCompleteModalOn(true)}
-                  color="primary"
-                >
-                  참여하기
-                </Button>
+                <Link to="/studyroom">
+                  <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    onClick={() => setCompleteModalOn(true)}
+                    color="primary"
+                  >
+                    참여하기
+                  </Button>
+                </Link>
                 <div className="alert">
                   <span className="alert">
                     🚨 참여하기 클릭 시 포인트 차감 후 화상스터디룸 입장합니다.
